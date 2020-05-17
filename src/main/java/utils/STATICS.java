@@ -14,7 +14,7 @@ public class STATICS {
     //######### GENERAL BOT SETTINGS #########//
 
 
-    public static String VERSION = "2.6.0";
+    public static String VERSION = "2.6.1";
 
     public static long afkchannelid = 188893186435973122l;
 

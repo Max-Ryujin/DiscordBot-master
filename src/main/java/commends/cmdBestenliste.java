@@ -62,7 +62,7 @@ public class cmdBestenliste implements Command {
             if (user == null || user.getIdLong() == 346332313078071307l) {
                 System.out.println("user does not exists");
             } else {
-                output += platz + ".   " + g.getMemberById(userid).getEffectiveName() + "  Level:  " + Leveldb.members.get(i)[2] + "  und " + Leveldb.members.get(i)[1] + " XP \n";
+                output += platz + ".   " + g.getMemberById(userid).getEffectiveName() + "  Level:  " + Leveldb.members.get(i)[2] + "  und " + Leveldb.members.get(i)[1] + " XP \n  ";
 
                 platz++;
             }

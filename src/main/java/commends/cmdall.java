@@ -16,13 +16,14 @@ public class cmdall implements Command{
             for (int i = 0; i < Leveldb.members.size(); i++) {
                 long userid = Leveldb.members.get(i)[0];
                 Member user;
-                try {
-                    user = event.getGuild().retrieveMemberById(userid).complete();
-                } catch (Exception e) {
-
-                    continue;
+                user = event.getGuild().retrieveMemberById(userid).complete();
+                if(user != null) {
+                    event.getChannel().sendMessage(i + 1 + ". " + user.getEffectiveName()).queue();
                 }
-                event.getChannel().sendMessage(i+1 + ". " + user.getEffectiveName()).queue();
+                else
+                {
+                    event.getChannel().sendMessage(i + 1 + ". " + userid+"  (Left us a long time ago)").queue();
+                }
             }
         }
         else
