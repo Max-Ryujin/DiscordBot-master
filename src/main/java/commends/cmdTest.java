@@ -13,6 +13,7 @@ public class cmdTest implements Command {
         try {
             if (event.getAuthor().getIdLong() == 260455062093037568l) {
 
+              
             } else {
                 event.getChannel().sendMessage("Sorry aber der ist nur für mich zum testen probier was anderes");
             }

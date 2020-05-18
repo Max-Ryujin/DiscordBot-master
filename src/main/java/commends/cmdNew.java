@@ -59,6 +59,7 @@ public class cmdNew implements Command {
         eb.addField("Version 2.5.0","All Members should be cached now on the server which makes it possible to track all user on the Server. Lets hope our Pi has enough Ram ",false);
         eb.addField("Version 2.6.0","Some Improvements and new Leaderboard channel",false);
         eb.addField("Version 2.6.1","changed Leaderboard",false);
+        eb.addField("Version 2.7.0","changed Leaderboard again",false);
         return eb;
     }
 }
