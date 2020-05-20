@@ -60,6 +60,7 @@ public class cmdNew implements Command {
         eb.addField("Version 2.6.0","Some Improvements and new Leaderboard channel",false);
         eb.addField("Version 2.6.1","changed Leaderboard",false);
         eb.addField("Version 2.7.0","changed Leaderboard again",false);
+        eb.addField("Version 2.7.1","New Disconnectmessage",false);
         return eb;
     }
 }

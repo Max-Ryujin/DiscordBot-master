@@ -1,6 +1,8 @@
 package commends;
 
 import core.Leveldb;
+import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
@@ -13,6 +15,12 @@ public class cmdall implements Command{
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
         if(event.getAuthor().getIdLong() == 188893043577847808l||event.getAuthor().getIdLong() == 260455062093037568l) {
+
+            MessageChannel m = event.getChannel();
+            for(Message mm: m.getHistory().retrievePast(100).complete())
+            {
+                mm.delete().complete();
+            }
             for (int i = 0; i < Leveldb.members.size(); i++) {
                 long userid = Leveldb.members.get(i)[0];
                 User user;
@@ -25,7 +33,7 @@ public class cmdall implements Command{
                 }
                 if(user != null) {
                     if(event.getGuild().getMember(user) != null) {
-                        event.getChannel().sendMessage(i + 1 + ". Level: " + Leveldb.members.get(i)[2] + " | " + user.getName() + " | " + event.getGuild().getMember(user).getEffectiveName()).queue();
+                        event.getChannel().sendMessage(i + 1 + ". Level: " + Leveldb.members.get(i)[2] + " | " + user.getName() + " - " + event.getGuild().getMember(user).getEffectiveName()).queue();
                     }
                     else
                     {

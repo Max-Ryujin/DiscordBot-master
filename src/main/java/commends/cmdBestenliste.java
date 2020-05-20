@@ -45,7 +45,7 @@ public class cmdBestenliste implements Command {
         int counter = 16;
 
 
-        String output = "\uD83D\uDC51";
+        String output = "\uD83D\uDC51 ";
 
 
         int platz = 1;

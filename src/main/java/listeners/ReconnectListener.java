@@ -19,6 +19,7 @@ public class ReconnectListener extends ListenerAdapter
         System.out.println("RECONNECT");
         Guild g = event.getJDA().getGuildById(STATICS.GuildId);
         LinkedList<Long> list = new LinkedList<Long>();
+        g.getTextChannels().get(0).deleteMessageById(STATICS.afkchannelid).complete();
         String Sprecher = "Sprecher: ";
         String Old_Sprecher = "Old_Sprecher: ";
         for (VoiceChannel v:

@@ -3,6 +3,7 @@ package commends;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class cmdTest implements Command {
+    long id;
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
         return false;

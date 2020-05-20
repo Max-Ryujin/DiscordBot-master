@@ -14,13 +14,15 @@ public class STATICS {
     //######### GENERAL BOT SETTINGS #########//
 
 
-    public static String VERSION = "2.7.0";
+    public static String VERSION = "2.7.1";
 
     public static long afkchannelid = 188893186435973122l;
 
     public int voiceXP = 1;
 
     public static String PREFIX = "-";
+
+    public long afkmessageid;
 
     public static OnlineStatus STATUS = OnlineStatus.ONLINE;
 
