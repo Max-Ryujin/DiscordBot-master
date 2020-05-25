@@ -32,7 +32,10 @@ public class onGuildVoiceMoveListener extends ListenerAdapter {
 
             XP = (long) ((spendTime / 120000.0) * (28 * (5 / Math.sqrt(Levelvor + 10)) - 12));
 
-            Leveldb.addXP(id, XP,event.getJDA());
+            if(!STATICS.blacklist.contains(id)) {
+
+                Leveldb.addXP(id, XP, event.getJDA());
+            }
 
             EmbedBuilder eb = new EmbedBuilder();
             eb.setTitle("LOG");

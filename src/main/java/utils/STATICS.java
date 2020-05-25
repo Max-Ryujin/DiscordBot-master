@@ -14,7 +14,7 @@ public class STATICS {
     //######### GENERAL BOT SETTINGS #########//
 
 
-    public static String VERSION = "2.7.1";
+    public static String VERSION = "3.0.0";
 
     public static long afkchannelid = 188893186435973122l;
 
@@ -22,9 +22,11 @@ public class STATICS {
 
     public static String PREFIX = "-";
 
-    public long afkmessageid;
+    public static long afkmessageid;
 
     public static OnlineStatus STATUS = OnlineStatus.ONLINE;
+
+    public static LinkedList<Long> blacklist = new LinkedList<>();
 
     public static LinkedList<VoiceChatMember> speakingMember = new LinkedList<>();
 

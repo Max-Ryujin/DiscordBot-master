@@ -79,6 +79,7 @@ public class Main {
        commandHandler.commands.put("setlvl", new cmdSetLvl());
        commandHandler.commands.put("setlevel", new cmdSetLvl());
        commandHandler.commands.put("all", new cmdall());
+       commandHandler.commands.put("blacklist", new cmdBlacklist());
 
        // sonstiges
        commandHandler.commands.put("pong", new cmdPong());

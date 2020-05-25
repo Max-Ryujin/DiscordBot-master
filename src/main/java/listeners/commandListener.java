@@ -30,14 +30,10 @@ public class commandListener extends ListenerAdapter
                 {
                     XP = (long) (30*(5/Math.sqrt(Levelvor+10))-12);
                 }
-                Leveldb.addXP(Avatarid,XP,event.getJDA());
+            if(!STATICS.blacklist.contains(Avatarid)) {
 
-             //   if(Levelvor != Leveldb.getLevel(Avatarid))
-               // {
-                 //   event.getTextChannel().sendMessage((Leveldb.Levelup(Leveldb.getLevel(Avatarid),event)).build()).queue();
-               // }
-
-
+                Leveldb.addXP(Avatarid, XP, event.getJDA());
+            }
 
         }
         catch (IOException e) {
