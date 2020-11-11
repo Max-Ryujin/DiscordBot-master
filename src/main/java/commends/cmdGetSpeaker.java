@@ -29,6 +29,9 @@ public class cmdGetSpeaker implements Command {
         eb.setColor(Color.MAGENTA);
                 for(VoiceChatMember v: STATICS.speakingMember)
                 {
+                    int Hours = (int) (v.getspeakingTime()/3600000);
+                    int Min = (int) (v.getspeakingTime()/60000);
+                    int sec = (int) (v.getspeakingTime()/1000);
                     eb.addField(event.getGuild().getMemberById(v.Getid()).getEffectiveName(),(v.getspeakingTime()/1000.0)+"",false);
                 }
                 event.getChannel().sendMessage(eb.build()).queue();

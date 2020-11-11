@@ -43,6 +43,7 @@ public class cmdNew implements Command {
         eb.addField("Version 3.1.1","Fixed a Bug where Members who reached lvl 50 got two Roles at once.",false);
         eb.addField("Version 3.2.0","Send befehl",false);
         eb.addField("Version 3.2.1","Fixed Leaderboard and updated -help",false);
+        eb.addField("Version 3.3.0","New reaction funtionality",false);
        
         return eb;
     }

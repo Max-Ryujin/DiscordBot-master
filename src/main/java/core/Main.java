@@ -15,6 +15,7 @@ import javax.security.auth.login.LoginException;
 
 public class Main {
     private int zähler;
+
     public static void main(String[] Args)
     {
         JDABuilder builder = new JDABuilder(AccountType.BOT);
@@ -29,6 +30,7 @@ public class Main {
                 ,new typinglistener()
                 ,new onGuildVoiceLeaveListener()
                 ,new onGuildVoiceMoveListener()
+                ,new reactionlistener()
                 ,new ReconnectListener());
 
         builder.setActivity((Activity.playing("version. "+STATICS.VERSION)));
@@ -38,6 +40,7 @@ public class Main {
         try
         {
             Leveldb leveldb = new Leveldb();
+            MessageDB messageDB = new MessageDB();
         }
         catch (Exception e)
         {
@@ -92,6 +95,7 @@ public class Main {
        commandHandler.commands.put("getspeaker",new cmdGetSpeaker());
        commandHandler.commands.put("send",new cmdSend());
        commandHandler.commands.put("getblacklist",new cmdGetBlacklist());
+       commandHandler.commands.put("reaction",new cmdReaktion());
    }
 
 
