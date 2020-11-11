@@ -171,6 +171,7 @@ public class Leveldb {
                 Role lvl50 = g.getRolesByName("\uD83D\uDCAFSpartan",false).get(0);
                 g.addRoleToMember(g.getMemberById(id), lvl50).complete();
                 SpezialReturnString = "Glückwunsch du nun Spartan";
+                break;
             case 65:
                 Role lvl65 = g.getRolesByName("\uD83D\uDD25Grand-Master",false).get(0);
                 g.addRoleToMember(g.getMemberById(id), lvl65).complete();
@@ -198,7 +199,7 @@ public class Leveldb {
         eb.setColor(Color.green);
         eb.addField("","Glückwunsch "+g.getMemberById(id).getEffectiveName()+"\n du hast Level "+level+"  erreicht",false);
         eb.addField("",SpezialReturnString,false);
-        jda.getGuildById(STATICS.GuildId).getTextChannels().get(0).sendMessage(eb.build()).queue();
+        jda.getGuildById(STATICS.GuildId).getTextChannelById(188893186435973121l).sendMessage(eb.build()).queue();
         return eb;
     }
 
@@ -240,6 +241,7 @@ public class Leveldb {
                 Role lvl50 = event.getGuild().getRolesByName("\uD83D\uDCAFSpartan",false).get(0);
                 event.getGuild().addRoleToMember(event.getGuild().getMember(event.getAuthor()), lvl50).complete();
                 SpezialReturnString = "Glückwunsch du nun Spartan";
+                break;
             case 65:
                 Role lvl65 = event.getGuild().getRolesByName("\uD83D\uDD25Grand-Master",false).get(0);
                 event.getGuild().addRoleToMember(event.getGuild().getMember(event.getAuthor()), lvl65).complete();

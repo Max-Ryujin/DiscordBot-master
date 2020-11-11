@@ -24,6 +24,8 @@ public class cmdHelp implements Command {
                  +"-mandelbrot \n"+
                 "-coinflip \n" +
                 "-feedback <Feedback> \n" +
+                "-Go \n"+
+                "-Mandelbrot \n"+
                 "-new \n";
         EmbedBuilder eb = new EmbedBuilder();
         eb.setColor(Color.GREEN);

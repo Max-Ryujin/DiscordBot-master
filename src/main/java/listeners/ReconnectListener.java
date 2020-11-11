@@ -18,8 +18,9 @@ public class ReconnectListener extends ListenerAdapter
     {
         System.out.println("RECONNECT");
         Guild g = event.getJDA().getGuildById(STATICS.GuildId);
+
+
         LinkedList<Long> list = new LinkedList<Long>();
-        event.getJDA().getGuildById(STATICS.GuildId).getTextChannelById(188893186435973121l).deleteMessageById(STATICS.afkmessageid).complete();
         String Sprecher = "Sprecher: ";
         String Old_Sprecher = "Old_Sprecher: ";
         for (VoiceChannel v:
@@ -31,7 +32,7 @@ public class ReconnectListener extends ListenerAdapter
             }
 
         }
-        Log.Message(event.getJDA(),Sprecher);
+       // Log.Message(event.getJDA(),Sprecher);
         for(VoiceChatMember v : STATICS.speakingMember)
         {
             boolean isthere = false;

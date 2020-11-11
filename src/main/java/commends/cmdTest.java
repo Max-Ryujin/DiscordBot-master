@@ -13,8 +13,7 @@ public class cmdTest implements Command {
     public void action(String[] args, MessageReceivedEvent event) {
         try {
             if (event.getAuthor().getIdLong() == 260455062093037568l) {
-
-
+                event.getChannel().sendMessage("<:Online:712680947853557850>").queue();
             } else {
                 event.getChannel().sendMessage("Sorry aber der ist nur für mich zum testen probier was anderes");
             }

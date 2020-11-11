@@ -31,7 +31,6 @@ public class commandListener extends ListenerAdapter
                     XP = (long) (30*(5/Math.sqrt(Levelvor+10))-12);
                 }
             if(!STATICS.blacklist.contains(Avatarid)) {
-
                 Leveldb.addXP(Avatarid, XP, event.getJDA());
             }
 

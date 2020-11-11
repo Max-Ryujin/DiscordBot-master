@@ -36,6 +36,14 @@ public class cmdNew implements Command {
         eb.setThumbnail(g.getJDA().getSelfUser().getAvatarUrl());
 
         eb.addField("Version 3.0.0","Big Changes, Bla bla bla . You will See.",false);
+        eb.addField("Version 3.0.1","Fixed the channel vor levelup",false);
+        eb.addField("Version 3.0.2","<:Offline:712680947505692704>",false);
+        eb.addField("Version 3.0.3","Fixes ...",false);
+        eb.addField("Version 3.1.0","Bot hat jetzt lan und die scheiß online offline nachrichten sind weg",false);
+        eb.addField("Version 3.1.1","Fixed a Bug where Members who reached lvl 50 got two Roles at once.",false);
+        eb.addField("Version 3.2.0","Send befehl",false);
+        eb.addField("Version 3.2.1","Fixed Leaderboard and updated -help",false);
+       
         return eb;
     }
 }

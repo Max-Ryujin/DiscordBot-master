@@ -14,10 +14,15 @@ public class cmdall implements Command{
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
+        Leveldb.Sortieren();
         if(event.getAuthor().getIdLong() == 188893043577847808l||event.getAuthor().getIdLong() == 260455062093037568l) {
 
             MessageChannel m = event.getChannel();
-            for(Message mm: m.getHistory().retrievePast(100).complete())
+            for(Message mm: m.getHistory().retrievePast(100).complete())  // Boosted
+            {
+                mm.delete().complete();
+            }
+            for(Message mm: m.getHistory().retrievePast(100).complete())  // Boosted
             {
                 mm.delete().complete();
             }
@@ -25,6 +30,7 @@ public class cmdall implements Command{
                 long userid = Leveldb.members.get(i)[0];
                 User user;
                 try {
+                    Leveldb.Save();
                     user = event.getJDA().retrieveUserById(userid).complete();
                 }
                 catch(Exception e)

@@ -90,6 +90,8 @@ public class Main {
        commandHandler.commands.put("test",new cmdTest());
        commandHandler.commands.put("go",new cmdGo());
        commandHandler.commands.put("getspeaker",new cmdGetSpeaker());
+       commandHandler.commands.put("send",new cmdSend());
+       commandHandler.commands.put("getblacklist",new cmdGetBlacklist());
    }
 
 
