@@ -33,5 +33,9 @@ public class commandHandler {
                   }
 
         }
+        else
+        {
+           cmd.event.getChannel().sendMessage(CommandDB.getCommand(cmd.invoke)).queue();
+        }
     }
 }

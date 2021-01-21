@@ -96,6 +96,10 @@ public class Main {
        commandHandler.commands.put("send",new cmdSend());
        commandHandler.commands.put("getblacklist",new cmdGetBlacklist());
        commandHandler.commands.put("reaction",new cmdReaktion());
+       commandHandler.commands.put("chess",new cmdChess());
+       commandHandler.commands.put("schach",new cmdChess());
+       commandHandler.commands.put("turnier",new cmdChess());
+
    }
 
 

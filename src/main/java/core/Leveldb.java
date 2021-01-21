@@ -57,12 +57,16 @@ public class Leveldb {
         {
            if(x[0]==Avatarid)
            {
+               boolean lvl = false;
                x[1]+= xp;
                while(x[1]>= 1000)
                {
-
+                   lvl=true;
                    x[1]-=1000;
                    x[2]++;
+               }
+               if(lvl)
+               {
                    Levelup(x[2],x[0],jda);
                }
            }

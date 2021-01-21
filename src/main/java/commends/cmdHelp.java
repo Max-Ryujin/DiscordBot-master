@@ -26,6 +26,7 @@ public class cmdHelp implements Command {
                 "-feedback <Feedback> \n" +
                 "-Go \n"+
                 "-Mandelbrot \n"+
+                "-Chess \n"+
                 "-new \n";
         EmbedBuilder eb = new EmbedBuilder();
         eb.setColor(Color.GREEN);
