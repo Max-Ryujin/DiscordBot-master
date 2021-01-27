@@ -46,6 +46,7 @@ public class cmdNew implements Command {
         eb.addField("Version 3.3.0","New reaction funtionality",false);
         eb.addField("Version 3.3.1","I love chess",false);
         eb.addField("Version 3.4.0","Admin Tools",false);
+        eb.addField("Version 3.4.1","Improvements ",false);
 
        
         return eb;

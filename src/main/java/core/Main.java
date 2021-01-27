@@ -41,6 +41,7 @@ public class Main {
         {
             Leveldb leveldb = new Leveldb();
             MessageDB messageDB = new MessageDB();
+            CommandDB commandDB = new CommandDB();
         }
         catch (Exception e)
         {
@@ -99,6 +100,9 @@ public class Main {
        commandHandler.commands.put("chess",new cmdChess());
        commandHandler.commands.put("schach",new cmdChess());
        commandHandler.commands.put("turnier",new cmdChess());
+
+       commandHandler.commands.put("setcommand",new cmdSetCommand());
+       commandHandler.commands.put("getcustomcommands",new cmdgetcustomCommand());
 
    }
 

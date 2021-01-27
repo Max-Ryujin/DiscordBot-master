@@ -19,17 +19,21 @@ public class cmdSetCommand implements Command{
             {
                 ausgabe+=args[i]+" ";
             }
-
+            System.out.println("c: "+command+" aus: "+ausgabe);
             CommandDB.addCommand(command,ausgabe);
             try {
                 CommandDB.save();
-                event.getChannel().sendMessage("Command aktiv");
+                event.getChannel().sendMessage("Command: "+ command +" aktiv").queue();
             }
             catch(Exception ex)
             {
-                event.getChannel().sendMessage("something went wr... alles am arsch");
+                event.getChannel().sendMessage("something went wr... alles am arsch").queue();
             }
 
+        }
+        else
+        {
+            event.getChannel().sendMessage("Nope").queue();
         }
     }
     @Override

@@ -35,10 +35,34 @@ public class CommandDB {
 
     static public void addCommand(String command,String anser)
     {
-        String[] x = new String[3];
-        x[0] = command;
-        x[1] = anser;
-        Commands.add(x);
+        if(commandexists(command))
+        {
+            for (String[] s: Commands
+            ) {
+                if(s[0].equals(command))
+                {
+                   s[1] = anser;
+                }
+            }
+        }
+        else {
+            String[] x = new String[3];
+            x[0] = command;
+            x[1] = anser;
+            Commands.add(x);
+        }
+    }
+
+    static boolean commandexists(String command)
+    {
+        for (String[] s: Commands
+        ) {
+            if(s[0].equals(command))
+            {
+               return true;
+            }
+        }
+        return false;
     }
 
     static public String getCommand(String command)
@@ -56,7 +80,7 @@ public class CommandDB {
     
     static public void save() throws IOException
     {
-        File datei = new File("Message.txt");
+        File datei = new File("Command.txt");
         FileWriter fw = new FileWriter(datei);
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write("");
