@@ -47,6 +47,7 @@ public class cmdNew implements Command {
         eb.addField("Version 3.3.1","I love chess",false);
         eb.addField("Version 3.4.0","Admin Tools",false);
         eb.addField("Version 3.4.1","Improvements ",false);
+        eb.addField("Version 3.4.2"," Profil command shows user with space in their names now properly",false);
 
        
         return eb;

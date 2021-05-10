@@ -29,19 +29,19 @@ public class cmdProfile implements  Command {
             {
                 username+= " "+args[i];
             }
-            if(!event.getGuild().getMembersByEffectiveName(args[0],false).isEmpty())
+            if(!event.getGuild().getMembersByEffectiveName(username,false).isEmpty())
              {
-                 User x = event.getGuild().getMembersByEffectiveName(args[0],false).get(0).getUser();
+                 User x = event.getGuild().getMembersByEffectiveName(username,false).get(0).getUser();
                  event.getTextChannel().sendMessage(profile(x, event.getGuild()).build()).queue();
              }
-            else if(!event.getGuild().getMembersByNickname(args[0],false).isEmpty())
+            else if(!event.getGuild().getMembersByNickname(username,false).isEmpty())
              {
-                User x = event.getGuild().getMembersByNickname(args[0],false).get(0).getUser();
+                User x = event.getGuild().getMembersByNickname(username,false).get(0).getUser();
                  event.getTextChannel().sendMessage(profile(x, event.getGuild()).build()).queue();
              }
-            else if(!event.getGuild().getMembersByName(args[0],false).isEmpty())
+            else if(!event.getGuild().getMembersByName(username,false).isEmpty())
              {
-                User x = event.getGuild().getMembersByName(args[0],false).get(0).getUser();
+                User x = event.getGuild().getMembersByName(username,false).get(0).getUser();
                  event.getTextChannel().sendMessage(profile(x, event.getGuild()).build()).queue();
              }
             else
