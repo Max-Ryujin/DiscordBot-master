@@ -20,7 +20,7 @@ public class Main {
     {
         JDABuilder builder = new JDABuilder(AccountType.BOT);
 
-        builder.setToken("MzQ2MzMyMzEzMDc4MDcxMzA3.XpbUlw.4c7aBwO80WiU56yrNQe-R6T86ig");
+        builder.setToken("Token");
         builder.setAutoReconnect(true);
         builder.addEventListeners(new readyLIstener()
                 ,new commandListener()
